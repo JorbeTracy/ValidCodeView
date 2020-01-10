@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
-
 
     defaultConfig {
         minSdkVersion 15
@@ -23,6 +23,13 @@ android {
         }
     }
 
+    android {
+        //忽略警告
+        lintOptions {
+            abortOnError false
+        }
+    }
+
 }
 
 dependencies {
@@ -38,4 +45,14 @@ dependencies {
 
 repositories {
     mavenCentral()
+}
+
+publish {
+    repoName = 'cusview'
+    userOrg = 'jorbe'
+    groupId = 'com.jorbe'
+    artifactId = 'ValidCodeView'
+    publishVersion = '1.0.0'
+    desc = 'view for SMS verification'
+    website = 'https://github.com/JorbeTracy/ValidCodeView'
 }

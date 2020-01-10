@@ -20,6 +20,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    android {
+        //忽略警告
+        lintOptions {
+            abortOnError false
+        }
+    }
 }
 
 dependencies {

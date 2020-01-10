@@ -9,6 +9,7 @@ import android.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
+import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 
 /**
@@ -20,7 +21,7 @@ class ValidCodeView @JvmOverloads constructor(
     context: Context,
     var attrs: AttributeSet? = null,
     defStyleAttr: Int = android.R.attr.editTextStyle
-) : EditText(context, attrs, defStyleAttr) {
+) : AppCompatEditText(context, attrs, defStyleAttr) {
 
     private var mPaint = Paint()
 
@@ -139,13 +140,16 @@ class ValidCodeView @JvmOverloads constructor(
         mPaint.textSize = mTextSize.toFloat()
         mPaint.textAlign = Paint.Align.CENTER
 
-        for (i in 0 until text.length) {
-            canvas?.drawText(
-                text[i].toString(),
-                (i + 0.5F) * (mWidth / mCodeCount),
-                3 * mHeight / 4F,
-                mPaint
-            )
+        if(text != null) {
+
+            for (i in 0 until text!!.length) {
+                canvas?.drawText(
+                    text!![i].toString(),
+                    (i + 0.5F) * (mWidth / mCodeCount),
+                    3 * mHeight / 4F,
+                    mPaint
+                )
+            }
         }
     }
 
@@ -153,7 +157,7 @@ class ValidCodeView @JvmOverloads constructor(
 
         mPaint.color = mDotColor
 
-        for(i in 0 until text.length) {
+        for(i in 0 until text!!.length) {
             canvas?.drawCircle(
                 (i + 0.5F) * (mWidth / mCodeCount),
                 5 * mHeight / 8F,
@@ -171,7 +175,7 @@ class ValidCodeView @JvmOverloads constructor(
     override fun onSelectionChanged(selStart: Int, selEnd: Int) {
         super.onSelectionChanged(selStart, selEnd)
         if(selStart == selEnd) {
-            setSelection(text.length)
+            setSelection(text!!.length)
         }
     }
 
