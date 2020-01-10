@@ -1,10 +1,10 @@
 This is a solution of flexible SMS verification
 &nbsp;
 
-### ValidCodeView
+## ValidCodeView
 ---
 
-#### Add ValidCodeView to your project
+### Add ValidCodeView to your project
 ---
 **Via Gradle：**
 ```
