@@ -5,12 +5,12 @@
 &nbsp;
 
 ## 如何集成
-**Gradle：**
+#### Gradle：
 ```
 implement 'com.jorbe:ValidCodeView:1.0.0'
 ```
 
-**Maven：**
+#### Maven：
 ```
 <dependency>
     <groupId>org.greenrobot</groupId>
@@ -19,7 +19,8 @@ implement 'com.jorbe:ValidCodeView:1.0.0'
 </dependency>
 ```
 
-或者下载本demo，将`validcodeviewlib`库添加到项目的依赖中(module dependency)。
+#### 或者：
+> 下载本demo，将`validcodeviewlib`库添加到项目的依赖中(module dependency)。
 
 &nbsp;
 
