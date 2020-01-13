@@ -1,6 +1,8 @@
 # ValidCodeView
 用于短信验证场景，支持设置验证码长度，文字颜色，下划线长度等。同时提供了掩码/明码两种显示模式。
-![screenshot_1](/image/normal_sc.jpg)
+
+&nbsp;
+![screenshot_1](/image/screenshot.png)
 
 &nbsp;
 
