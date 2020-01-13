@@ -22,13 +22,13 @@
         app:code_count="4"
         app:line_color="@color/colorPrimaryDark"
         app:text_mode="type_psd"
-        android:focusable="true" />
+        android:focusable="true"/>
 
     <Button
         android:id="@+id/btn_tran_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="切换模式"
+        android:text="Change Text Mode"
         app:layout_constraintTop_toBottomOf="@id/valid_view"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp"/>

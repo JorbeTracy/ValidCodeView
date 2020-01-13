@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="valid_code_text_size">16sp</dimen>
-    <dimen name="valid_code_line_with">0dp</dimen>
+    <dimen name="valid_code_line_with">10dp</dimen>
 </resources>
