@@ -9,7 +9,7 @@
 ## 如何集成
 #### Gradle：
 ```
-implement 'com.jorbe:ValidCodeView:1.0.0'
+implementation 'com.jorbe:ValidCodeView:1.0.0'
 ```
 
 #### Maven：
@@ -22,7 +22,7 @@ implement 'com.jorbe:ValidCodeView:1.0.0'
 ```
 
 #### 或者：
-> 下载本demo，将`validcodeviewlib`库添加到项目的依赖中(module dependency)。
+> 下载本demo，将 `validcodeviewlib` 库添加到项目的依赖中(module dependency)。
 
 &nbsp;
 
