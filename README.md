@@ -9,15 +9,16 @@
 ## 如何集成
 #### Gradle：
 ```
-implementation 'com.jorbe:ValidCodeView:1.0.0'
+implementation 'com.jorbe:ValidCodeView:1.0.1'
 ```
 
 #### Maven：
 ```
 <dependency>
-    <groupId>org.greenrobot</groupId>
-    <artifactId>eventbus</artifactId>
-    <version>3.1.1</version>
+	<groupId>com.jorbe</groupId>
+	<artifactId>ValidCodeView</artifactId>
+	<version>1.0.1</version>
+	<type>pom</type>
 </dependency>
 ```
 
