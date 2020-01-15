@@ -8,8 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private var modeFlag = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,19 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getTextMode(): ValidCodeView.ValidCodeMode {
-        return if(modeFlag == 0) {
-            modeFlag = 1
-            ValidCodeView.ValidCodeMode.TYPE_NORMAL
-        } else {
-            modeFlag = 0
+        return if(valid_view.getTextMode() == ValidCodeView.ValidCodeMode.TYPE_NORMAL.value) {
             ValidCodeView.ValidCodeMode.TYPE_PASSWORD
+        } else {
+            ValidCodeView.ValidCodeMode.TYPE_NORMAL
         }
     }
 
     private fun checkInput() {
         val code = valid_view.text.toString()
-        if(code.length < 4) {
-            toast("请输入完整验证码")
+        if(code.length < valid_view.getCodeSize()) {
+            toast("请输入${valid_view.getCodeSize()}位验证码")
         } else {
             toast(code)
         }
