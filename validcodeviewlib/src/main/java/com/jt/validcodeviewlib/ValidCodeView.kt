@@ -184,6 +184,14 @@ class ValidCodeView @JvmOverloads constructor(
         invalidate()
     }
 
+    fun getTextMode(): Int {
+        return this.mTextMode
+    }
+
+    fun getCodeSize(): Int {
+        return mTextSize
+    }
+
     enum class ValidCodeMode(var value: Int) {
 
         TYPE_NORMAL(0),
