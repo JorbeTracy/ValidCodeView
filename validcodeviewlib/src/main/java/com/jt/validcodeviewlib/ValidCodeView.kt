@@ -102,8 +102,10 @@ class ValidCodeView @JvmOverloads constructor(
         mWidth = w
         mHeight = h
 
-        if (mLineWidth <= 10) {    // line width cannot be less than 10px
-            mLineWidth = mWidth * 3 / mCodeCount / 4    // the default underline width
+        val maxWidth = mWidth * 3 / mCodeCount / 4
+
+        if (mLineWidth <= 10 || mLineWidth > maxWidth) {    // line width cannot be less than 10px
+            mLineWidth = maxWidth    // the default underline width
         }
     }
 
@@ -188,7 +190,7 @@ class ValidCodeView @JvmOverloads constructor(
     }
 
     fun getCodeSize(): Int {
-        return mTextSize
+        return mCodeCount
     }
 
     enum class ValidCodeMode(var value: Int) {

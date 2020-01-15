@@ -52,7 +52,7 @@ publish {
     userOrg = 'jorbe'
     groupId = 'com.jorbe'
     artifactId = 'ValidCodeView'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.2'
     desc = 'view for SMS verification'
     website = 'https://github.com/JorbeTracy/ValidCodeView'
 }
